@@ -23,6 +23,9 @@ export class AppComponent {
   doneTask(index: number) {
     const tempTask = this.tasksList.splice(index, 1)[0];
     this.doneTasksList.push(tempTask);
-    console.log(this.doneTasksList);
+  }
+
+  clearDoneList() {
+    this.doneTasksList = [];
   }
 }
