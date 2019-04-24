@@ -9,14 +9,20 @@ export class AppComponent {
   newTaskInputPlaceholder = 'Wpisz nowe zadanie';
   newTask: string;
   tasksList: Array<string> = [];
+  doneTasksList: Array<string> = [];
 
   addTask() {
     this.tasksList.push(this.newTask);
     this.newTask = '';
-    console.log(this.tasksList);
   }
 
   removeTask(index: number) {
     this.tasksList.splice(index, 1);
+  }
+
+  doneTask(index: number) {
+    const tempTask = this.tasksList.splice(index, 1)[0];
+    this.doneTasksList.push(tempTask);
+    console.log(this.doneTasksList);
   }
 }
