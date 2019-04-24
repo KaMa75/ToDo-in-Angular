@@ -16,7 +16,7 @@ export class AppComponent {
     console.log(this.tasksList);
   }
 
-  onChange() {
-    console.log(this.newTask);
+  removeTask(index: number) {
+    this.tasksList.splice(index, 1);
   }
 }
