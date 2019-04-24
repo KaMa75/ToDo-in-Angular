@@ -32,7 +32,11 @@
       </ul>
     </div>
     <div>
-      Zadania wykonane
+      <ul>
+        <li *ngFor="let task of doneTasksList; let i = index">
+          {{ i }}: {{ task }}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
