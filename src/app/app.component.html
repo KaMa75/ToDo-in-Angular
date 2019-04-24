@@ -1,7 +1,17 @@
 <div>
   <div class="container">
     <div>
-      Dodawanie zadań
+      <input
+        type="text"
+        [placeholder]="newTaskInputPlaceholder"
+        [(ngModel)]="newTask"
+        (input)="onChange()"
+      >
+      <button
+        (click)="addTask()"
+      >
+        Dodaj
+      </button>
     </div>
   </div>
   <div class="container">

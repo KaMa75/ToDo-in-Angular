@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todoapp';
+  newTaskInputPlaceholder = 'Wpisz nowe zadanie';
+  newTask: string;
+  tasksList: Array<string> = [];
+
+  addTask() {
+    this.tasksList.push(this.newTask);
+    this.newTask = '';
+    console.log(this.tasksList);
+  }
+
+  onChange() {
+    console.log(this.newTask);
+  }
 }
