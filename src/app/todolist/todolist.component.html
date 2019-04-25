@@ -1,0 +1,23 @@
+<div>
+  <ng-container *ngIf="tasksList.length > 0; else noTasks">
+    <h3>Zadania do wykonania</h3>
+    <ul>
+      <li *ngFor="let task of tasksList; let i = index">
+        {{ i }}: {{ task }}
+        <button
+          (click)="removeTask(i)"
+        >
+          Usuń
+        </button>
+        <button
+          (click)="doneTask(i)"
+        >
+          Zrobione
+        </button>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #noTasks>
+    <h3>Nie masz nic do zrobienia.</h3>
+  </ng-template>
+</div>
