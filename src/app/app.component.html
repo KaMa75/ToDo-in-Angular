@@ -1,18 +1,23 @@
 <div>
   <div class="container">
+
     <app-addtask
       (emitTask)="addTask($event)"
     ></app-addtask>
+
   </div>
   <div class="container">
+
     <app-todolist
       [tasksList] = "tasksList"
       (emitRemove)="removeTask($event)"
       (emitDone)="doneTask($event)"
     ></app-todolist>
+
     <app-donelist
       [doneTasksList]="doneTasksList"
-      (emitClear)="clearDoneList()"
+      (emitClear)="clearDoneList($event)"
     ></app-donelist>
+
   </div>
 </div>

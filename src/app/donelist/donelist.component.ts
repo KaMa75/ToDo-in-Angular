@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class DonelistComponent implements OnInit {
 
-  @Input() doneTasksList = [];
+  @Input() doneTasksList: Array<string> = [];
   @Output() emitClear = new EventEmitter();
 
   clearDoneList() {
