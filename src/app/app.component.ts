@@ -6,14 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  newTaskInputPlaceholder = 'Wpisz nowe zadanie';
-  newTask: string;
+
   tasksList: Array<string> = [];
   doneTasksList: Array<string> = [];
 
-  addTask() {
-    this.tasksList.push(this.newTask);
-    this.newTask = '';
+  addTask(task: string) {
+    this.tasksList.push(task);
   }
 
   removeTask(index: number) {
