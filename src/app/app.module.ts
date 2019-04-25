@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AddtaskComponent } from './addtask/addtask.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddtaskComponent
   ],
   imports: [
     BrowserModule,
