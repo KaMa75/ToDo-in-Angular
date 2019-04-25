@@ -1,0 +1,15 @@
+<div>
+  <h3>Wykonanych zadań: {{ doneTasksList.length }}</h3>
+  <ul>
+    <li *ngFor="let task of doneTasksList; let i = index">
+      {{ i }}: {{ task }}
+    </li>
+  </ul>
+  <ng-container *ngIf="doneTasksList.length > 0">
+    <button
+      (click)="clearDoneList()"
+    >
+      Wyczyść listę
+    </button>
+  </ng-container>
+</div>
