@@ -1,6 +1,8 @@
 <div>
   <ng-container *ngIf="tasksList.length > 0; else noTasks">
-    <h3>Zadań do wykonania: {{tasksList.length}}</h3>
+    <h3
+      [ngStyle]="{color: getColor()}"
+    >Zadań do wykonania: {{tasksList.length}}</h3>
     <ul>
       <li *ngFor="let task of tasksList; let i = index">
         {{ i }}: {{ task }}

@@ -19,6 +19,19 @@ export class TodolistComponent implements OnInit {
     this.emitDone.emit(index);
   }
 
+  getColor() {
+    const length = this.tasksList.length;
+    let color: string;
+    if(length < 5) {
+      color = 'green';
+    } else if(length < 9) {
+      color = 'orange';
+    } else {
+      color = 'red';
+    }
+    return color;
+  }
+
   constructor() { }
 
   ngOnInit() {
