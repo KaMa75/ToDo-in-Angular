@@ -10,3 +10,13 @@ li {
 .last-li {
   background: lightgreen;
 }
+
+li button {
+  margin-left: 20px;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
