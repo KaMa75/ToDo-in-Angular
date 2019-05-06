@@ -1,6 +1,8 @@
 import { TasksService } from './../services/tasks.service';
 import { Component, OnInit } from '@angular/core';
 
+import { Task } from '../models/task';
+
 @Component({
   selector: 'app-addtask',
   templateUrl: './addtask.component.html',
@@ -14,7 +16,8 @@ export class AddtaskComponent implements OnInit {
   constructor(private tasksService: TasksService) { }
 
   addTask() {
-    this.tasksService.addTask(this.newTask);
+    const task: Task = {name: this.newTask, created: new Date()};
+    this.tasksService.addTask(task);
     this.newTask = '';
   }
 

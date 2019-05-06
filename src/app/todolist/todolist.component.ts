@@ -1,6 +1,8 @@
 import { TasksService } from './../services/tasks.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { Task } from '../models/task';
+
 @Component({
   selector: 'app-todolist',
   templateUrl: './todolist.component.html',
@@ -9,10 +11,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class TodolistComponent implements OnInit {
 
-  tasksList = [];
+  tasksList: Array<Task> = [];
 
   constructor(private tasksService: TasksService) {
-    this.tasksService.getTasksListObs().subscribe((tasks: Array<string>) => {
+    this.tasksService.getTasksListObs().subscribe((tasks: Array<Task>) => {
       this.tasksList = tasks;
     });
   }
@@ -26,16 +28,16 @@ export class TodolistComponent implements OnInit {
   }
 
   getColor() {
-    // const length = this.tasksList.length;
-    // let color: string;
-    // if(length < 5) {
-    //   color = 'green';
-    // } else if(length < 9) {
-    //   color = 'orange';
-    // } else {
-    //   color = 'red';
-    // }
-    // return color;
+    const length = this.tasksList.length;
+    let color: string;
+    if(length < 5) {
+      color = 'green';
+    } else if(length < 9) {
+      color = 'orange';
+    } else {
+      color = 'red';
+    }
+    return color;
   }
 
   ngOnInit() {

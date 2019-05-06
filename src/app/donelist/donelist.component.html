@@ -2,7 +2,7 @@
   <h3>Wykonanych zadań: {{ doneTasksList.length }}</h3>
   <ul>
     <li *ngFor="let task of doneTasksList; let i = index" [ngClass]="{'odd-li': i%2===0}">
-      {{ i }}: {{ task }}
+      {{ i }}: {{ task.name }}
     </li>
   </ul>
   <ng-container *ngIf="doneTasksList.length > 0">

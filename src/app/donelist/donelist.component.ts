@@ -1,5 +1,7 @@
 import { TasksService } from './../services/tasks.service';
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { Task } from '../models/task';
 
 @Component({
   selector: 'app-donelist',
@@ -8,10 +10,10 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class DonelistComponent implements OnInit {
 
-  doneTasksList: Array<string> = [];
+  doneTasksList: Array<Task> = [];
 
   constructor(private tasksService: TasksService) {
-    this.tasksService.getDoneTasksListObs().subscribe((tasks: Array<string>) => {
+    this.tasksService.getDoneTasksListObs().subscribe((tasks: Array<Task>) => {
       this.doneTasksList = tasks;
     });
   }
