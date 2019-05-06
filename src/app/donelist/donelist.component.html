@@ -2,7 +2,7 @@
   <h3>Wykonanych zadań: {{ doneTasksList.length }}</h3>
   <ul>
     <li appChecked appDate [date]="task.end" *ngFor="let task of doneTasksList; let i = index" [ngClass]="{'odd-li': i%2===0}">
-      {{ i }}: {{ task.name }}
+      {{ i }}: {{ task.name | taskname: ' - zakończone!' }}
     </li>
   </ul>
   <ng-container *ngIf="doneTasksList.length > 0">
