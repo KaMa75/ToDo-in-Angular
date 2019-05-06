@@ -15,8 +15,12 @@ li button {
   margin-left: 20px;
 }
 
-.todo-list li {
+.todo-list li .centered-line {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+p {
+  margin-bottom: 0;
 }

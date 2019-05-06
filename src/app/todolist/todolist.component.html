@@ -4,21 +4,23 @@
       [ngStyle]="{color: getColor()}"
     >Zadań do wykonania: {{tasksList.length}}</h3>
     <ul class="todo-list">
-      <li *ngFor="let task of tasksList; let i = index" [ngClass]="{'odd-li': i%2===0, 'last-li': tasksList.length===1}">
-        {{ i }}: {{ task.name }}
-        <div>
-          <button
-            type="button" class="btn btn-danger"
-            (click)="removeTask(i)"
-          >
-            Usuń
-          </button>
-          <button
-            type="button" class="btn btn-success"
-            (click)="doneTask(i)"
-          >
-            Zrobione
-          </button>
+      <li appDate [date]="task.created" *ngFor="let task of tasksList; let i = index" [ngClass]="{'odd-li': i%2===0, 'last-li': tasksList.length===1}">
+        <div class="centered-line">
+          {{ i }}: {{ task.name }}
+          <div>
+            <button
+              type="button" class="btn btn-danger"
+              (click)="removeTask(i)"
+            >
+              Usuń
+            </button>
+            <button
+              type="button" class="btn btn-success"
+              (click)="doneTask(i)"
+            >
+              Zrobione
+            </button>
+          </div>
         </div>
       </li>
     </ul>
