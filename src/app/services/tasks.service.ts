@@ -20,6 +20,7 @@ export class TasksService {
   addTask(task: string) {
     this.tasksList.push(task);
     this.tasksListObs.next(this.tasksList);
+    console.log(this.tasksList)
   }
 
   removeTask(index: number) {

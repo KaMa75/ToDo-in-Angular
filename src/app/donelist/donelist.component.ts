@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { TasksService } from './../services/tasks.service';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-donelist',
@@ -7,14 +8,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class DonelistComponent implements OnInit {
 
-  @Input() doneTasksList: Array<string> = [];
-  @Output() emitClear = new EventEmitter();
+  doneTasksList: Array<string> = [];
 
-  clearDoneList() {
-    this.emitClear.emit();
+  constructor(private tasksService: TasksService) {
+    this.tasksService.getDoneTasksListObs().subscribe((tasks: Array<string>) => {
+      this.doneTasksList = tasks;
+    });
   }
 
-  constructor() { }
+  clearDoneList() {
+    this.tasksService.clearDoneList();
+  }
 
   ngOnInit() {
   }
