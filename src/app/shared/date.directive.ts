@@ -15,7 +15,12 @@ export class DateDirective {
 
   @HostListener('mouseenter')
   mouseenter(eventDate: Event) {
-    this.paragraph.innerText = this.date.toLocaleDateString();
+    const year = this.date.getFullYear();
+    const month = this.date.getMonth();
+    const day = this.date.getDay();
+    const monthNames = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
+    this.paragraph.innerText = `${day} ${monthNames[month]} ${year}`;
+    this.paragraph.className = 'task-date';
     this.renderer.appendChild(this.el.nativeElement, this.paragraph);
   }
 
