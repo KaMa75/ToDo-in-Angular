@@ -9,6 +9,7 @@ import { DonelistComponent } from './donelist/donelist.component';
 import { CheckedDirective } from './shared/checked.directive';
 import { DateDirective } from './shared/date.directive';
 import { TasknamePipe } from './shared/taskname.pipe';
+import { SortNamePipe } from './shared/sort-name.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TasknamePipe } from './shared/taskname.pipe';
     DonelistComponent,
     CheckedDirective,
     DateDirective,
-    TasknamePipe
+    TasknamePipe,
+    SortNamePipe
   ],
   imports: [
     BrowserModule,
