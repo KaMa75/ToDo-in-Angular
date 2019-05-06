@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import { DonelistComponent } from './donelist/donelist.component';
+import { CheckedDirective } from './shared/checked.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddtaskComponent,
     TodolistComponent,
-    DonelistComponent
+    DonelistComponent,
+    CheckedDirective
   ],
   imports: [
     BrowserModule,
