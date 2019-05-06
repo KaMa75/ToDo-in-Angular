@@ -36,6 +36,7 @@ export class TasksService {
 
   doneTask(index: number) {
     const tempTask = this.tasksList.splice(index, 1)[0];
+    tempTask.end = new Date();
     this.doneTasksList.push(tempTask);
     this.doneTasksListObs.next(this.doneTasksList);
   }
