@@ -19,12 +19,12 @@ export class TodolistComponent implements OnInit {
     });
   }
 
-  removeTask(index: number) {
-    this.tasksService.removeTask(index);
+  removeTask(task: Task) {
+    this.tasksService.removeTask(task);
   }
 
-  doneTask(id: string) {
-    this.tasksService.doneTask(id);
+  doneTask(task: Task) {
+    this.tasksService.doneTask(task);
   }
 
   getColor() {
