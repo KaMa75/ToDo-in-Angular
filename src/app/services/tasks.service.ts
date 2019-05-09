@@ -26,6 +26,7 @@ export class TasksService {
 
   removeTask(task: Task) {
     const list = this.tasksListObs.getValue().filter(element => element !== task);
+    this.httpService.removeTask(task).subscribe();
     this.tasksListObs.next(list);
   }
 
