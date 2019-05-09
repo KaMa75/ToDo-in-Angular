@@ -5,7 +5,7 @@ import { Directive, HostListener, Input, ElementRef, Renderer2 } from '@angular/
 })
 export class DateDirective {
 
-  @Input() private date: Date;
+  @Input() private date: string;
 
   private paragraph;
 
@@ -15,11 +15,11 @@ export class DateDirective {
 
   @HostListener('mouseenter')
   mouseenter(eventDate: Event) {
-    const year = this.date.getFullYear();
-    const month = this.date.getMonth();
-    const day = this.date.getDay();
-    const monthNames = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
-    this.paragraph.innerText = `${day} ${monthNames[month]} ${year}`;
+    // const year = this.date.getFullYear();
+    // const month = this.date.getMonth();
+    // const day = this.date.getDay();
+    // const monthNames = ['stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 'lipca', 'sierpnia', 'września', 'października', 'listopada', 'grudnia'];
+    this.paragraph.innerText = this.date;
     this.paragraph.className = 'task-date';
     this.renderer.appendChild(this.el.nativeElement, this.paragraph);
   }

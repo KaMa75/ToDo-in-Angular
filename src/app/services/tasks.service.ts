@@ -16,10 +16,10 @@ export class TasksService {
 
   constructor() {
     this.tasksList = [
-      {name: 'Nauka Angulara', created: new Date()},
-      {name: 'Zdobycie pracy', created: new Date()},
-      {name: 'Zdobywać doświadczenie', created: new Date()},
-      {name: 'Zostać FullStackiem', created: new Date()}
+      {name: 'Nauka Angulara', created: new Date().toLocaleString(), isDone: false},
+      {name: 'Zdobycie pracy', created: new Date().toLocaleString(), isDone: false},
+      {name: 'Zdobywać doświadczenie', created: new Date().toLocaleString(), isDone: false},
+      {name: 'Zostać FullStackiem', created: new Date().toLocaleString(), isDone: false}
     ];
     this.tasksListObs.next(this.tasksList);
   }
@@ -36,8 +36,9 @@ export class TasksService {
 
   doneTask(index: number) {
     const tempTask = this.tasksList.splice(index, 1)[0];
-    tempTask.end = new Date();
+    tempTask.end = new Date().toLocaleString();
     this.doneTasksList.push(tempTask);
+    this.tasksListObs.next(this.tasksList);
     this.doneTasksListObs.next(this.doneTasksList);
   }
 
