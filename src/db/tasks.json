@@ -3,20 +3,50 @@
     {
       "name": "asdsd",
       "created": "9.05.2019, 16:29:13",
-      "isDone": false,
-      "id": 1
+      "isDone": true,
+      "id": 1,
+      "end": "9.05.2019, 16:47:42"
     },
     {
       "name": "asd",
       "created": "9.05.2019, 16:29:29",
-      "isDone": false,
-      "id": 2
+      "isDone": true,
+      "id": 2,
+      "end": "9.05.2019, 16:47:15"
     },
     {
       "name": "Zadanie 1",
       "created": "9.05.2019, 16:33:58",
+      "isDone": true,
+      "id": 3,
+      "end": "9.05.2019, 16:49:47"
+    },
+    {
+      "name": "asdfsad",
+      "created": "9.05.2019, 16:49:41",
+      "isDone": true,
+      "id": 4,
+      "end": "9.05.2019, 16:56:56"
+    },
+    {
+      "name": "asdfsad",
+      "created": "9.05.2019, 16:50:20",
+      "isDone": true,
+      "id": 5,
+      "end": "9.05.2019, 16:59:59"
+    },
+    {
+      "name": "sadasdsadsasds",
+      "created": "9.05.2019, 16:50:48",
+      "isDone": true,
+      "id": 6,
+      "end": "9.05.2019, 16:59:45"
+    },
+    {
+      "name": "asfadsf",
+      "created": "9.05.2019, 16:59:58",
       "isDone": false,
-      "id": 3
+      "id": 7
     }
   ]
 }

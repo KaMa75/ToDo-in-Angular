@@ -32,6 +32,7 @@ export class TasksService {
   doneTask(task: Task) {
     task.end = new Date().toLocaleString();
     task.isDone = true;
+    this.httpService.doneTask(task).subscribe();
     const list = this.tasksListObs.getValue();
     this.tasksListObs.next(list);
   }

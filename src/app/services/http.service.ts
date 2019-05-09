@@ -11,7 +11,7 @@ export class HttpService {
   url = 'http://localhost:3000/tasks';
 
   constructor(private http: HttpClient) {
-    this.getTasks().subscribe(tasks => {console.log(tasks)});
+    this.getTasks();
   }
 
   getTasks(): Observable<Array<Task>> {
@@ -19,8 +19,11 @@ export class HttpService {
   }
 
   addTask(task: Task): Observable<Task> {
-    console.log(JSON.stringify(task));
     return this.http.post<Task>(this.url, task);
+  }
+
+  doneTask(task: Task): Observable<Task> {
+    return this.http.put(`${this.url}/${task.id}`, task);
   }
 
 }
