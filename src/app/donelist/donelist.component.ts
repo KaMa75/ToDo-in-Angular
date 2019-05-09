@@ -13,8 +13,8 @@ export class DonelistComponent implements OnInit {
   doneTasksList: Array<Task> = [];
 
   constructor(private tasksService: TasksService) {
-    this.tasksService.getDoneTasksListObs().subscribe((tasks: Array<Task>) => {
-      this.doneTasksList = tasks;
+    this.tasksService.getTasksListObs().subscribe((tasks: Array<Task>) => {
+      this.doneTasksList = tasks.filter(task => task.isDone);
     });
   }
 
