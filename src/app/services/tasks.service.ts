@@ -9,19 +9,29 @@ import { Task } from '../models/task';
 export class TasksService {
 
   private tasksList: Array<Task> = [];
-  // private doneTasksList: Array<Task> = [];
 
   private tasksListObs = new BehaviorSubject<Array<Task>>(this.tasksList);
-  // private doneTasksListObs = new BehaviorSubject<Array<Task>>(this.doneTasksList);
 
   constructor() {
     this.tasksList = [
-      {name: 'Nauka Angulara', created: new Date().toLocaleString(), end: new Date().toLocaleString(), isDone: true},
-      {name: 'Zdobycie pracy', created: new Date().toLocaleString(), isDone: false},
-      {name: 'Zdobywać doświadczenie', created: new Date().toLocaleString(), isDone: false},
-      {name: 'Zostać FullStackiem', created: new Date().toLocaleString(), isDone: false}
+      {id: '0', name: 'Nauka Angulara', created: new Date().toLocaleString(), end: new Date().toLocaleString(), isDone: true},
+      {id: '1', name: 'Zdobycie pracy', created: new Date().toLocaleString(), isDone: false},
+      {id: '2', name: 'Zdobywać doświadczenie', created: new Date().toLocaleString(), isDone: false},
+      {id: '3', name: 'Zostać FullStackiem', created: new Date().toLocaleString(), isDone: false}
     ];
     this.tasksListObs.next(this.tasksList);
+  }
+
+  findIndex(id: string): number {
+    let index: number;
+
+    this.tasksList.forEach((task, i) => {
+      if(task.id === id) {
+        index = i;
+      }
+    });
+
+    return index;
   }
 
   addTask(task: Task) {
@@ -34,12 +44,12 @@ export class TasksService {
     this.tasksListObs.next(this.tasksList);
   }
 
-  doneTask(index: number) {
-    const tempTask = this.tasksList.splice(index, 1)[0];
-    tempTask.end = new Date().toLocaleString();
-    // this.doneTasksList.push(tempTask);
+  doneTask(id: string) {
+    const index: number = this.findIndex(id);
+
+    this.tasksList[index].end = new Date().toLocaleString();
+    this.tasksList[index].isDone = true;
     this.tasksListObs.next(this.tasksList);
-    // this.doneTasksListObs.next(this.doneTasksList);
   }
 
   clearDoneList() {
@@ -50,9 +60,5 @@ export class TasksService {
   getTasksListObs(): Observable<Array<Task>> {
     return this.tasksListObs.asObservable();
   }
-
-  // getDoneTasksListObs(): Observable<Array<Task>> {
-  //   return this.doneTasksListObs.asObservable();
-  // }
 
 }

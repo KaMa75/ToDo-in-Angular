@@ -23,8 +23,8 @@ export class TodolistComponent implements OnInit {
     this.tasksService.removeTask(index);
   }
 
-  doneTask(index: number) {
-    this.tasksService.doneTask(index);
+  doneTask(id: string) {
+    this.tasksService.doneTask(id);
   }
 
   getColor() {

@@ -10,13 +10,13 @@
           <div>
             <button
               type="button" class="btn btn-danger"
-              (click)="removeTask(i)"
+              (click)="removeTask(task.id)"
             >
               Usuń
             </button>
             <button
               type="button" class="btn btn-success"
-              (click)="doneTask(i)"
+              (click)="doneTask(task.id)"
             >
               Zrobione
             </button>
