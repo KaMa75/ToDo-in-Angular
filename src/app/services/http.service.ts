@@ -22,11 +22,11 @@ export class HttpService {
     return this.http.post<Task>(this.url, task);
   }
 
-  doneTask(task: Task): Observable<Task> {
+  doneTask(task: Task): Observable<Object> {
     return this.http.put(`${this.url}/${task.id}`, task);
   }
 
-  removeTask(task: Task): Observable<Task> {
+  removeTask(task: Task): Observable<Object> {
     return this.http.delete(`${this.url}/${task.id}`);
   }
 

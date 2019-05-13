@@ -38,5 +38,5 @@ npm install -g json-server
 
 In the folder "/src/db" run
 
-json-server --watch task.json
+json-server --watch tasks.json
 

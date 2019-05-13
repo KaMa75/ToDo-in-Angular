@@ -1,14 +1,15 @@
-<div>
-  <div class="container">
+<div class="wrapper">
+  <ul class="nav naw-pills justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="add-task" routerLinkActive="active">Dodaj zadanie</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="tasks" routerLinkActive="active">Zadania do wykonania</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="done" routerLinkActive="active">Zadania wykonane</a>
+    </li>
+  </ul>
 
-    <app-addtask></app-addtask>
-
-  </div>
-  <div class="container">
-
-    <app-todolist></app-todolist>
-
-    <app-donelist></app-donelist>
-
-  </div>
+  <router-outlet></router-outlet>
 </div>

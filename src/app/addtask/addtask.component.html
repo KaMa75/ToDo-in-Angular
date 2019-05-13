@@ -1,4 +1,4 @@
-<div>
+<div class="input-field">
   <input
     type="text"
     [placeholder]="newTaskInputPlaceholder"
@@ -6,6 +6,7 @@
   >
   <button
     (click)="addTask()"
+    routerLink="tasks"
   >
     Dodaj
   </button>
