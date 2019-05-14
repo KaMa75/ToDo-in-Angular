@@ -32,7 +32,7 @@ export class TodolistComponent implements OnInit {
     let color: string;
     if(length < 5) {
       color = 'green';
-    } else if(length < 9) {
+    } else if (length < 9) {
       color = 'orange';
     } else {
       color = 'red';

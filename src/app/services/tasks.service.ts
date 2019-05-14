@@ -12,15 +12,25 @@ export class TasksService {
   private tasksListObs = new BehaviorSubject<Array<Task>>([]);
 
   constructor(private httpService: HttpService) {
+    this.getTasks();
+  }
+
+  getTasks() {
     this.httpService.getTasks().subscribe(tasks => {
       this.tasksListObs.next(tasks);
     });
   }
 
   addTask(tasks: Array<Task>) {
-    // this.httpService.addTask(tasks).subscribe(task => {console.log(task)});
-    const list = this.tasksListObs.getValue().concat(tasks);
-    this.tasksListObs.next(list);
+    this.httpService.addTask(tasks);
+    // let list: Array<Task>;
+    this.httpService.getTasks().subscribe(tasksFromDb => {
+      console.log(tasksFromDb)
+      this.tasksListObs.next(tasksFromDb);
+      // list = tasks;
+    });
+    // const list = this.tasksListObs.getValue().concat(tasks);
+    // this.tasksListObs.next(list);
   }
 
   removeTask(task: Task) {

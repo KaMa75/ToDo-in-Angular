@@ -1,3 +1,4 @@
+import { AuthService } from './../auth/auth.service';
 import { TasksService } from './../services/tasks.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -16,7 +17,7 @@ export class AddtaskComponent implements OnInit {
 
   newTaskInputPlaceholder = 'Wpisz nowe zadanie';
 
-  constructor(private tasksService: TasksService, private router: Router) { }
+  constructor(private tasksService: TasksService, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
     this.addForm = this.initForm();
@@ -37,9 +38,10 @@ export class AddtaskComponent implements OnInit {
 
   createTaskList(): Array<Task> {
     const tasksArr = <[string]>this.addForm.get('taskName').value;
-    return tasksArr.map(task => {
-      return {name: task, created: new Date().toLocaleString(), isDone: false};
+    const tasks =  tasksArr.map(task => {
+      return {name: task, userId: this.authService.user.uid, created: new Date().toLocaleString(), isDone: false};
     });
+    return tasks;
   }
 
   addField() {

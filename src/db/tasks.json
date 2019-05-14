@@ -1,133 +1,103 @@
 {
   "tasks": [
     {
-      "name": "asdsd",
-      "created": "9.05.2019, 16:29:13",
-      "isDone": true,
-      "id": 1,
-      "end": "9.05.2019, 16:47:42"
-    },
-    {
       "name": "asd",
-      "created": "9.05.2019, 16:29:29",
-      "isDone": true,
-      "id": 2,
-      "end": "9.05.2019, 16:47:15"
-    },
-    {
-      "name": "Zadanie 1",
-      "created": "9.05.2019, 16:33:58",
-      "isDone": true,
-      "id": 3,
-      "end": "9.05.2019, 16:49:47"
-    },
-    {
-      "name": "asdfsad",
-      "created": "9.05.2019, 16:49:41",
-      "isDone": true,
-      "id": 4,
-      "end": "9.05.2019, 16:56:56"
-    },
-    {
-      "name": "asdfsad",
-      "created": "9.05.2019, 16:50:20",
-      "isDone": true,
-      "id": 5,
-      "end": "9.05.2019, 16:59:59"
-    },
-    {
-      "name": "sadasdsadsasds",
-      "created": "9.05.2019, 16:50:48",
-      "isDone": true,
-      "id": 6,
-      "end": "9.05.2019, 16:59:45"
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 15:32:27",
+      "isDone": false,
+      "id": 1
     },
     {
       "name": "as",
-      "created": "13.05.2019, 12:24:24",
-      "isDone": true,
-      "id": 7,
-      "end": "13.05.2019, 13:07:46"
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 15:32:27",
+      "isDone": false,
+      "id": 2
     },
     {
-      "name": "asd",
-      "created": "13.05.2019, 12:24:26",
-      "isDone": true,
-      "id": 8,
-      "end": "13.05.2019, 13:07:54"
+      "name": "asdasd",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 15:33:03",
+      "isDone": false,
+      "id": 3
     },
     {
-      "name": "asdasds",
-      "created": "13.05.2019, 12:24:29",
+      "name": "1",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 15:33:23",
+      "isDone": true,
+      "id": 4,
+      "end": "14.05.2019, 17:53:16"
+    },
+    {
+      "name": "2",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 15:33:23",
+      "isDone": false,
+      "id": 5
+    },
+    {
+      "name": "3",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 15:33:23",
+      "isDone": false,
+      "id": 6
+    },
+    {
+      "name": "sasasas",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 17:32:19",
+      "isDone": false,
+      "id": 7
+    },
+    {
+      "name": "12",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 17:53:02",
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "name": "123",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 17:54:53",
+      "isDone": false,
+      "id": 9
+    },
+    {
+      "name": "321",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 17:59:44",
       "isDone": false,
       "id": 10
     },
     {
-      "name": "asds",
-      "created": "13.05.2019, 12:51:47",
+      "name": "444",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 18:00:06",
       "isDone": false,
       "id": 11
     },
     {
-      "name": "2",
-      "created": "13.05.2019, 12:51:57",
-      "isDone": true,
-      "id": 12,
-      "end": "13.05.2019, 12:58:39"
+      "name": "12",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 18:02:50",
+      "isDone": false,
+      "id": 12
     },
     {
-      "name": "sd",
-      "created": "13.05.2019, 12:52:45",
+      "name": "asdasd",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 18:09:15",
       "isDone": false,
       "id": 13
     },
     {
-      "name": "adsd",
-      "created": "13.05.2019, 12:59:09",
+      "name": "asdasdasd",
+      "userId": "gboitQ3faFV4U5HYB7zDhHuqSDC3",
+      "created": "14.05.2019, 18:09:32",
       "isDone": false,
       "id": 14
-    },
-    {
-      "name": "asd",
-      "created": "13.05.2019, 13:02:23",
-      "isDone": true,
-      "id": 15,
-      "end": "13.05.2019, 13:07:48"
-    },
-    {
-      "name": "",
-      "created": "14.05.2019, 08:54:47",
-      "isDone": true,
-      "id": 17,
-      "end": "14.05.2019, 09:47:47"
-    },
-    {
-      "name": "",
-      "created": "14.05.2019, 09:14:17",
-      "isDone": true,
-      "id": 20,
-      "end": "14.05.2019, 09:47:49"
-    },
-    {
-      "name": "",
-      "created": "14.05.2019, 09:21:37",
-      "isDone": true,
-      "id": 21,
-      "end": "14.05.2019, 09:47:58"
-    },
-    {
-      "name": "",
-      "created": "14.05.2019, 09:22:46",
-      "isDone": true,
-      "id": 22,
-      "end": "14.05.2019, 09:47:57"
-    },
-    {
-      "name": "",
-      "created": "14.05.2019, 09:36:11",
-      "isDone": true,
-      "id": 23,
-      "end": "14.05.2019, 09:48:03"
     }
   ]
 }
