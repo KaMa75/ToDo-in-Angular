@@ -17,10 +17,9 @@ export class TasksService {
     });
   }
 
-  addTask(task: Task) {
-    this.httpService.addTask(task).subscribe(task => {console.log(task)});
-    const list = this.tasksListObs.getValue();
-    list.push(task);
+  addTask(tasks: Array<Task>) {
+    // this.httpService.addTask(tasks).subscribe(task => {console.log(task)});
+    const list = this.tasksListObs.getValue().concat(tasks);
     this.tasksListObs.next(list);
   }
 

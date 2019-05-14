@@ -18,8 +18,10 @@ export class HttpService {
     return this.http.get<Array<Task>>(this.url);
   }
 
-  addTask(task: Task): Observable<Task> {
-    return this.http.post<Task>(this.url, task);
+  addTask(tasks: Array<Task>) {
+    tasks.forEach(task => {
+      this.http.post<Task>(this.url, task);
+    });
   }
 
   doneTask(task: Task): Observable<Object> {
