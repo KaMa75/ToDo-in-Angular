@@ -3,12 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { TodolistComponent } from './todolist/todolist.component';
 import { DonelistComponent } from './donelist/donelist.component';
 import { AddtaskComponent } from './addtask/addtask.component';
+import { LoginComponent } from './auth/login/login.component';
 
 const appRoutes: Routes = [
   {
     path: '',
     redirectTo: '/tasks',
     pathMatch: 'full'
+  },
+  {
+    path: 'add-task',
+    component: AddtaskComponent
   },
   {
     path: 'tasks',
@@ -19,8 +24,8 @@ const appRoutes: Routes = [
     component: DonelistComponent
   },
   {
-    path: 'add-task',
-    component: AddtaskComponent
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

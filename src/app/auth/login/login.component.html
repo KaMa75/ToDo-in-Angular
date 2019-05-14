@@ -1,12 +1,16 @@
-<form (ngSubmit)="login(formData)" #formData="ngForm">
-  <div>
-    <label for="email">E-mail:</label>
-    <input ngModel type="email" name="email" required>
-
-    <label for="password">Hasło:</label>
-    <input ngModel type="password" name="password" required>
-
-    <button type="submit" [disabled]="formData.invalid">Zaloguj</button>
-    <button type="button" [disabled]="formData.invalid" (click)="signup(formData)">Rejestracja</button>
-  </div>
-</form>
+<div class="input-field">
+  <form (ngSubmit)="login(formData)" #formData="ngForm">
+    <div>
+      <label for="email">E-mail: </label>
+      <input ngModel type="email" name="email" required>
+    </div>
+    <div>
+      <label for="password">Hasło: </label>
+      <input ngModel type="password" name="password" required>
+    </div>
+    <div>
+      <button type="submit" [disabled]="formData.invalid">Zaloguj</button>
+      <button type="button" [disabled]="formData.invalid" (click)="signup(formData)">Rejestracja</button>
+    </div>
+  </form>
+</div>
