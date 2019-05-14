@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppComponent } from './app.component';
 import { AddtaskComponent } from './addtask/addtask.component';
@@ -15,6 +16,7 @@ import { DateDirective } from './shared/date.directive';
 import { TasknamePipe } from './shared/taskname.pipe';
 import { SortNamePipe } from './shared/sort-name.pipe';
 import { environment } from 'src/environments/environment';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { environment } from 'src/environments/environment';
     CheckedDirective,
     DateDirective,
     TasknamePipe,
-    SortNamePipe
+    SortNamePipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     RoutingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
