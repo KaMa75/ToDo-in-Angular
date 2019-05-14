@@ -4,6 +4,7 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { DonelistComponent } from './donelist/donelist.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { LoginComponent } from './auth/login/login.component';
+import { GuardService } from './auth/guard.service';
 
 const appRoutes: Routes = [
   {
@@ -13,15 +14,18 @@ const appRoutes: Routes = [
   },
   {
     path: 'add-task',
-    component: AddtaskComponent
+    component: AddtaskComponent,
+    canActivate: [GuardService]
   },
   {
     path: 'tasks',
-    component: TodolistComponent
+    component: TodolistComponent,
+    canActivate: [GuardService]
   },
   {
     path: 'done',
-    component: DonelistComponent
+    component: DonelistComponent,
+    canActivate: [GuardService]
   },
   {
     path: 'login',
