@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { AngularFireModule } from '@angular/fire';
+
 import { AppComponent } from './app.component';
 import { AddtaskComponent } from './addtask/addtask.component';
 import { TodolistComponent } from './todolist/todolist.component';
@@ -12,6 +14,7 @@ import { CheckedDirective } from './shared/checked.directive';
 import { DateDirective } from './shared/date.directive';
 import { TasknamePipe } from './shared/taskname.pipe';
 import { SortNamePipe } from './shared/sort-name.pipe';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { SortNamePipe } from './shared/sort-name.pipe';
     FormsModule,
     HttpClientModule,
     RoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
